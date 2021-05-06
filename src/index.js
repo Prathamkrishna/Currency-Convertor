@@ -4,14 +4,18 @@ import './index.css';
 import CurrencyCalc from './app.js'
 
 function Main() {
-    const [currency, setCurrency] = useState('Dollars');
+    const [currency, setCurrency] = useState('USD');
     const [amount, setAmount] = useState({eventCount: 0, Amount: ''})
+    // const endpoint = 'convert';
     function amountChange(event){
         setAmount({Amount: event.target.value});
     }
     function selectCurrency(x){
-        if(x === "Dollars"){
-            setCurrency('Dollars');
+        if(x === "USD"){
+            setCurrency('USD');
+            // const from = 'USD';
+            // const to = 'INR';
+            // const amountt = `{amount.Amount}`
         }
         if(x === "Pounds"){
             setCurrency('Pounds');
@@ -23,16 +27,23 @@ function Main() {
             setCurrency('Australian Dollars')
         }
     }
+    // $.ajax({
+        url: 'https://api.currencylayer.com/' + endpoint + '?access_key=' + access_key +'&from=' + from + '&to=' + to + '&amount=' + amount,
+    //     dataType: 'jsonp',
+    //     success: function(json){
+    //         alert(json.result);
+    //     }
+    // });
     return(
         <div>
             Enter currency: <input type="number" onChange={amountChange}/>
             <br />
             <div className='optionss'>
                 <select>
-                    <option value="Dollars" onClick={()=>selectCurrency("Dollars")}>Dollars</option>
-                    <option value="Pounds" onClick={()=>selectCurrency("Pounds")}>Pounds</option>
-                    <option value="inr" onClick={()=>selectCurrency("INR")}>Indian Rupees</option>
-                    <option value="aus" onClick={()=>selectCurrency("AUS")}>Australian Dollars</option>
+                    <option value="Dollars" onClick={()=>selectCurrency("USD")}>USD</option>
+                    <option value="Pounds" onClick={()=>selectCurrency("GBP")}>GBP</option>
+                    <option value="inr" onClick={()=>selectCurrency("INR")}>INR</option>
+                    <option value="aus" onClick={()=>selectCurrency("AUD")}>AUD</option>
                 </select>
             </div>
             <br />
@@ -42,6 +53,7 @@ function Main() {
             <br />
             <div>
                 <CurrencyCalc />
+                
             </div>
         </div>
     )
