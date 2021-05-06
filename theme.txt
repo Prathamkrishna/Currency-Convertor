@@ -1,9 +1,0 @@
-Currency Converter
-
-- input field which takes in the amount
-- a select dropdown to select the currency that you are inputting in
-- a table beneath where you show the converted amount in all the *other* currencies
-- use an API to get the conversion rates
-- lastly, implement another input field on top of the table — a search bar to filter out the currencies
-
-// ask for as we type it should show currencies available
