@@ -1,4 +1,5 @@
 #theme
 
 theme.txt
-currencyconv/src/search.js
+./src/search.js
+node_modules
