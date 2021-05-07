@@ -33,30 +33,7 @@ function Main() {
   function selectCurrency(currencyAbbr) {
     setCurrency(currencyAbbr);
   }
-  //     if (x === "USD") {
-  //       setCurrency("USD");
-  //       // const from = 'USD';
-  //       // const to = 'INR';
-  //       // const amountt = `{amount.Amount}`
-  //     }
-  //     if (x === "Pounds") {
-  //       setCurrency("Pounds");
-  //     }
-  //     if (x === "INR") {
-  //       setCurrency("Indian Rupees");
-  //     }
-  //     if (x === "AUS") {
-  //       setCurrency("Australian Dollars");
-  //     }
-  //   }
-  // $.ajax({
-  // url: 'https://api.currencylayer.com/' + endpoint + '?access_key=' + access_key +'&from=' + from + '&to=' + to + '&amount=' + amount,
-  //     dataType: 'jsonp',
-  //     success: function(json){
-  //         alert(json.result);
-  //     }
-  // });
-  return (
+  return(
     <div>
       Enter currency: <input type="number" onChange={amountChange} />
       <br />
@@ -66,8 +43,7 @@ function Main() {
             <option
               value={currencyObj.name}
               onClick={() => selectCurrency(currencyObj.abbr)}
-              key={currencyObj.abbr}
-            >
+              key={currencyObj.abbr}>
               {`${currencyObj.name} — ${currencyObj.abbr}`}
             </option>
           ))}
