@@ -25,7 +25,6 @@ const CURRENCIES_MAP = [
 function Main() {
   const [currency, setCurrency] = useState("USD");
   const [amount, setAmount] = useState({ eventCount: 0, Amount: "0" });
-  // const endpoint = 'convert';
   function amountChange(event) {
     setAmount({ Amount: event.target.value });
   }
