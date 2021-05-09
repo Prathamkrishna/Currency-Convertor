@@ -8,10 +8,9 @@ function CurrencyConv(props) {
 		{Data.map((data, key)=>{
 			return(
 				<div key={key}>
-					{data.finalcur}({data.name}) = {calculation(`${data.rate}`, `${props.amount}`)}
+					{data.finalcur}({data.name}) = {calculation(data.rate, props.amount)}
 				</div>
 			)
-			
 		})}
 		</>
     )
