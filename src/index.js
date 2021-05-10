@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import CurrencyCalc from "./app.js";
+import CurrencyConv from "./app.js";
 
 const CURRENCIES_MAP = [
   {
@@ -9,7 +9,7 @@ const CURRENCIES_MAP = [
     name: "US Dollar",
   },
   {
-    abbr: "GBP",
+    abbr: "GDB",
     name: "British Pounds",
   },
   {
@@ -17,9 +17,17 @@ const CURRENCIES_MAP = [
     name: "Indian Rupee",
   },
   {
-    abbr: "AUD",
-    name: "Australian Dollar",
+    abbr: "EUR",
+    name: "Eurp",
   },
+  {
+    abbr: "CAD",
+    name: "Canadian Dollar",
+  },
+  {
+    abbr: "PLN",
+    name: "Polish ZLoty",
+  }
 ];
 
 function Main() {
@@ -54,7 +62,7 @@ function Main() {
       </div>
       <br />
       <div>
-        <CurrencyCalc currency={currency} amount={amount.Amount}/>
+        <CurrencyConv currency={currency} amount={amount.Amount}/>
       </div>
     </div>
   );
