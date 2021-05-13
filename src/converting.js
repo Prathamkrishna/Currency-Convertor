@@ -1,9 +1,6 @@
 import React from 'react';
 
 export default function OtherCurrency(props){
-    //converting to USD
-    // const amountt = (1/props.rate)*props.amount;
-    // const amountt = 1/props.rate;
     function checkcurrency(x, y, z){
 	    if(x.eur.finalcur === y){
             const rateingdb = (x.gdb.rate/x.eur.rate)*props.amount
