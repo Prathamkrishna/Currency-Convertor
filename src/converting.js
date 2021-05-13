@@ -1,29 +1,44 @@
 import React from 'react';
 
-export default function otherCurrency(props){
-    console.log(props.amount, "before if statement")
-	if(props.otherCurrency === props.data.finalcur){
-        var amountt = (1/props.amount)*props.data.rate;
-        amountt = amountt ? amountt : 1;
-        console.log(amountt);
-        return(
-            <>
-                {console.log(props.amount, "inside if statement, from otherCurrency function")}
-                {amountt}
-            </>
-        )
-    }
+export default function OtherCurrency(props){
+    //converting to USD
+    // const amountt = (1/props.rate)*props.amount;
+    // const amountt = 1/props.rate;
+    function checkcurrency(x, y){
+	    if(x.eur.finalcur === y){
+            return(
+                <div>
+                    {x.eur.finalcur}
+                </div>
+            )
+	    }
+	    if(x.gdb.finalcur === y){
+            return(
+                <>
+                    {x.gdb.finalcur}
+                </>
+            )
+	    }
+	    if(x.cad.finalcur === y){
+            return(
+                <>
+                    {x.cad.finalcur}
+                </>
+            )
+	    }
+	    if(x.inr.finalcur === y){
+	    	return(
+                <>
+                    {x.inr.finalcur}
+                </>
+            )
+        }
+	}
+    return(
+        <div>
+            hi
+            {checkcurrency(props.data, props.currency)}
+        </div>
+    )
 }
 
-//
-// if(props.currency === data.finalcur){
-//     const amount= (1/data.rate) * props.amount;
-//     //is it because data.rate is mutliple??? in conversion.js 
-//     console.log(data.rate, "datarate")
-//     console.log(amount, "amount")
-//     return(
-//         <>
-//             <name rate={data.rate} amount={amount} />
-//         </>
-//     )
-// }
