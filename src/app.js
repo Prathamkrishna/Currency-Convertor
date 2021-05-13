@@ -11,7 +11,7 @@ export default function CurrencyConv(props) {
 				{Data.map((data, key)=>{
 					return(
 						<>
-							<OtherCurrency data={data} currency={props.currency} />
+							<OtherCurrency data={data} currency={props.currency} amount={props.amount} />
 						</>
 					)
 				})}
@@ -21,34 +21,32 @@ export default function CurrencyConv(props) {
 	else{
     	return(
 			<>
-			{name(props)}
+				The converted amount to other currencies is:
+				{Data.map((data, key)=>{
+					return(
+						<>
+							{finalcalc(data, props.amount)}
+						</>
+					)
+				})}
 			</>
 		)
 	}
 }
 
-function name(props){
-	return ( 
-		<>
-		The converted amount to other currencies are:
-		{Data.map((data, key)=>{
-			return(
-				<div key={key}>
-					{data.finalcur}({data.name}) = {calculation(data.rate, props.amount)}
-				</div>
-			)
-		})}
-		</>
-	)
-}
-
-function calculation(x,  y){
-	const finalval = x * y;
+function finalcalc(x, y){
+	const rateineur = x.eur.rate * y
+	const rateingdb = x.gdb.rate * y
+	const rateincad = x.cad.rate * y
+	const rateinpln = x.pln.rate * y
+	const rateininr = x.inr.rate * y
 	return(
-		<>
-			{finalval}
-		</>
+		<div>
+			{x.eur.finalcur}: {rateineur}<br />
+			{x.gdb.finalcur}: {rateingdb}<br />
+			{x.cad.finalcur}: {rateincad}<br />
+			{x.pln.finalcur}: {rateinpln}<br />
+			{x.inr.finalcur}: {rateininr}
+		</div>
 	)
 }
-
-// export default currencyConv()

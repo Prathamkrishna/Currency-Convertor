@@ -18,16 +18,12 @@ const CURRENCIES_MAP = [
   },
   {
     abbr: "EUR",
-    name: "Eurp",
+    name: "Euro",
   },
   {
     abbr: "CAD",
     name: "Canadian Dollar",
   },
-  {
-    abbr: "PLN",
-    name: "Polish ZLoty",
-  }
 ];
 
 function Main() {
