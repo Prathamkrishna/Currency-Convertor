@@ -71,10 +71,26 @@ export default function OtherCurrency(props){
                     {x.cad.finalcur}: {rateincad}
                     <br />
                     {x.pln.finalcur}: {rateinpln}
+                    
                 </div>
             )
         }
 	}
+    // function printCurrencies(props){
+    //     return(
+    //         <div>
+    //             {x.eur.finalcur}: {rateineur}
+    //             <br />
+    //             {x.gdb.finalcur}: {rateingdb}
+    //             <br />
+    //             {x.cad.finalcur}: {rateincad}
+    //             <br />
+    //             {x.pln.finalcur}: {rateinpln}
+    //             <br />
+    //             {x.inr.finalcur}: {rateininr}
+    //         </div>
+    //     )
+    // }
     return(
         <div>
             The converted amount to other currencies is:

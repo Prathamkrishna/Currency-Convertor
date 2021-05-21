@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import CurrencyConv from "./app.js";
+import ChartFunction from "./chartfile.js";
 
 const CURRENCIES_MAP = [
   {
@@ -59,6 +60,10 @@ function Main() {
       <br />
       <div>
         <CurrencyConv currency={currency} amount={amount.Amount}/>
+      </div>
+      <br />
+      <div>
+          <ChartFunction />
       </div>
     </div>
   );
