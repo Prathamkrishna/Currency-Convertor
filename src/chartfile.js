@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+import {BarChart,  Bar, XAxis, YAxis, Tooltip} from 'recharts';
 import './chartfile.css'
 
 export default function ChartFunction(){
@@ -66,6 +66,7 @@ export default function ChartFunction(){
                     <YAxis />
                     <Tooltip />
                 </BarChart>
+                <br />
                 EUR-INR rates in the previous years
             </div>
         </div>
